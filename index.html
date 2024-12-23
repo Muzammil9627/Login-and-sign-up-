@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select
+        {
+            width: 100%;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <label for="username">
+        User Name
+       <input type="text" id="username1">
+   </label>
+   <br>
+   <br>
+    <label for="email">
+         User Email
+        <input type="email" id="userEmail">
+    </label>
+    <br>
+    <br>
+    <label for="password">
+        user Password
+        <input type="password" id="userpassword">
+    </label>
+    <br>
+    <br>
+    <Button onclick="check()">Sign up</Button>
+
+    <script>
+       function check(){
+        let userName = document.getElementById("username1").value;
+        let UserEmail = document.getElementById("userEmail").value;
+        let userPassword = document.getElementById("userpassword").value;
+        localStorage.setItem("username1",userName)
+        
+       }
+
+
+    </script>
+
+</body>
+</html>
