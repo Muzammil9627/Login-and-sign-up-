@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        .maincontainer{
+            width: 400px;
+            height: 350px;
+            border: 3px solid black;
+            padding: 10px;
+            padding-right: 20px;
+            background-color: rgb(145, 145, 237);
+        }
         input[type="text"],
         input[type="email"],
         input[type="password"],
@@ -12,10 +20,27 @@
         {
             width: 100%;
             border: 2px solid black;
+            background-color: rgb(141, 141, 211);
+        
+        }
+        button{
+            width: 100px;
+            padding: 5px;
+            border-radius: 20px;
+        }
+        a{
+            /* border: 1px solid black;
+            color: rgb(41, 40, 40); */
+            text-decoration: none;
+            /* background-color: white;
+            padding: 5px;
+            border-radius: 20px; */
         }
     </style>
 </head>
 <body>
+    <div class="maincontainer">
+        <h1>Welcome To Sign-Up Page</h1>
     <label for="username">
         User Name
        <input type="text" id="username1">
@@ -34,7 +59,12 @@
     </label>
     <br>
     <br>
-    <Button onclick="check()">Sign up</Button>
+    <a href="login.html">
+    <Button onclick="check()">Sign up </a></Button>
+    <br>
+    <br>
+   
+</div>
 
     <script>
        function check(){
@@ -42,7 +72,9 @@
         let UserEmail = document.getElementById("userEmail").value;
         let userPassword = document.getElementById("userpassword").value;
         localStorage.setItem("username1",userName)
-        
+        localStorage.setItem("userEmail",UserEmail)
+        localStorage.setItem("userpassword",userPassword)
+       
        }
 
 
